@@ -1,12 +1,45 @@
 # ------------------------------------------------------------------------
 
 # Lab 1
-# Problem 1
-# Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
+#1. Create a list called my_list with the values [1, 5, 'apple', 20.5].
+my_list=[1,5,'apple',20.5]
+#2. Using indexing, print the value 'apple' from my_list.
+my_list=[1,5,'apple',20.5]
+print(my_list[1])
+#3. Add the value 10 to the end of my_list using the append() method. Print the updated list.
+my_list=[1,5,'apple',20.5]
+my_list.append(10)
+#4. Remove the value 20.5 from my_list using the remove() method. Print the updated list.
+my_list=[1,5,'apple',20.5]
+my_list.remove(20.5)
+#5. Reverse the order of the elements in my_list using a method. Print the reversed list.
+my_list=[1,5,'apple',20.5]
+my_list.reverse
+print(my_list)
+### Lab Exercise 2: Dictionaries in Python
 
-# Problem 2
-# Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
+#1. Create a dictionary called person with keys 'name', 'age', 'job' and values 'John', 30, 'teacher'.
+person= {'name': 'John',
+         'age' : '30',
+         'job' : 'teacher'}
 
+print(person)
+
+#2. Print the value corresponding to the 'job' key.
+person= {'name': 'John',
+         'age' : '30',
+         'job' : 'teacher'}
+
+print(person['job'])
+#3. Add a new key-value pair: 'city': 'Paris' to the person dictionary. Print the updated dictionary.
+person['city']= 'Paris'
+print(person)
+#4. Remove the 'age' key-value pair from person. Print the updated dictionary.
+del person['age']
+print(person)
+#5. Iterate through the person dictionary and print out each key-value pair on a separate line.
+for key, value in person.items():
+    print(f"{key}:{value}")
 # -----------------------------------------------------------------------------
 
 
@@ -33,6 +66,12 @@ def count_vowels(s: str) -> int:
     Returns:
     - int: The number of vowels in the string
     """
+    vowels = 'aeiouAEIOU'
+    count = 0
+    for char in s:
+        if char in vowels: 
+            count += 1 
+        return count
     # TODO: Implement this function
     pass
 
@@ -63,6 +102,23 @@ def merge_lists(list1: list, list2: list) -> list:
     Returns:
     - list: A new sorted list containing all elements from list1 and list2
     """
+    merge_list[]:
+    i, j = 0, 0
+    while i < len(list1) and j < len(list2):
+        if list[i] < list2[j]:
+            merge_list.append(list1[i])
+            i += 1
+        else: 
+            merge_list.append(list2[j])
+            j += 1 
+    while i < len(list1):
+        merge_list.append(list1[i])
+        i += 1
+    while j < len(list2):
+        merge_list.append(list2)
+        j += 1
+    return merge_list
+
     # TODO: Implement this function
     pass
 
@@ -94,6 +150,10 @@ def word_lengths(words: list) -> list:
     Returns:
     - list: A list containing the lengths of the words
     """
+    lengths = []
+    for word in words:
+        lengths.append(len(word))
+    return lengths
     # TODO: Implement this function
     pass
 
@@ -121,6 +181,10 @@ def reverse_string(s: str) -> str:
     Returns:
     - str: The reversed string
     """
+reversed_str= ""
+for char in s:
+    reversed_str = char + reversed_str
+return reversed_str
     # TODO: Implement this function
     pass
 
@@ -150,6 +214,12 @@ def intersection(list1: list, list2: list) -> list:
     Returns:
     - list: The intersection of the two lists
     """
+intersection_list = []
+for item1 in list1:
+    for item2 in list2:
+        if item1 == item2 and item1 not in intersection_list:
+            intersection_list.append()
+return intersection_list
     # TODO: Implement this function
     pass
 
