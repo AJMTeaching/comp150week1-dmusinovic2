@@ -62,7 +62,7 @@ def count_vowels(s: str) -> int:
     for character in s:
         if character in vowels: 
             count = count + 1 
-        return count
+    return count
     # TODO: Implement this function
     pass
 
@@ -93,7 +93,6 @@ def merge_lists(list1: list, list2: list) -> list:
     Returns:
     - list: A new sorted list containing all elements from list1 and list2
     """
-    merged_list[]:
     i, j = 0, 0
     while i < len(list1) and j < len(list2):
         if list[i] < list2[j]:
@@ -108,7 +107,7 @@ def merge_lists(list1: list, list2: list) -> list:
     while j < len(list2):
         merged_list.append(list2)
         j += 1
-    return merge_list
+    return merged_list
 
     # TODO: Implement this function
     pass
@@ -175,7 +174,7 @@ def reverse_string(s: str) -> str:
 reversed_str= ""
 for char in s:
     reversed_str = char + reversed_str
-return reversed_str
+
     # TODO: Implement this function
     pass
 
