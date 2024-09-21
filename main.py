@@ -93,9 +93,11 @@ def merge_lists(list1: list, list2: list) -> list:
     Returns:
     - list: A new sorted list containing all elements from list1 and list2
     """
+
+    merged_list = []
     i, j = 0, 0
     while i < len(list1) and j < len(list2):
-        if list[i] < list2[j]:
+        if list1[i] < list2[j]:
             merged_list.append(list1[i])
             i += 1
         else: 
@@ -105,7 +107,7 @@ def merge_lists(list1: list, list2: list) -> list:
         merged_list.append(list1[i])
         i += 1
     while j < len(list2):
-        merged_list.append(list2)
+        merged_list.append(list2[j])
         j += 1
     return merged_list
 
@@ -171,10 +173,13 @@ def reverse_string(s: str) -> str:
     Returns:
     - str: The reversed string
     """
-reversed_str= ""
-for char in s:
-    reversed_str = char + reversed_str
 
+    reverse_str = ""
+
+    for char in s:
+        reverse_str = char + reverse_str
+
+    return reverse_str
     # TODO: Implement this function
     pass
 
@@ -204,10 +209,13 @@ def intersection(list1: list, list2: list) -> list:
     Returns:
     - list: The intersection of the two lists
     """
-intersection_list = []
-for item in list1:
-    if item in list2:
-        intersection_list.append(item)
+    
+    intersection_list = []
+
+    for item in list1:
+        if item in list2:
+            intersection_list.append(item)
+
     return list(set(intersection_list))
     # TODO: Implement this function
     pass
